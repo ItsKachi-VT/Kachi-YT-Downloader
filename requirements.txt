@@ -1,0 +1,4 @@
+yt-dlp>=2025.08.17
+pywebview>=5.0.0
+requests>=2.32.0
+PyInstaller>=6.10.0

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kachi Downloader</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div>
+            <p class="eyebrow">Descargador</p>
+            <h2>Kachi Downloader</h2>
+          </div>
+        </div>
+
+        <nav class="menu">
+          <button class="menu-item active" data-view="download">Descargar</button>
+          <button class="menu-item" data-view="history">Historial</button>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Herramienta ligera</p>
+            <h2>Video + Audio</h2>
+          </div>
+          <span class="status-pill" id="statusPill">Listo</span>
+        </header>
+
+        <section id="downloadView" class="panel view-panel active">
+          <label for="urlInput">URL del video</label>
+          <div class="input-group">
+            <input id="urlInput" type="text" placeholder="https://www.youtube.com/watch?v=..." />
+          </div>
+
+          <div class="grid two-columns">
+            <div>
+              <label for="formatSelect">Formato de salida</label>
+              <div class="select-wrap">
+                <select id="formatSelect">
+                  <option value="video_mp4">Video MP4</option>
+                  <option value="video_mkv">Video MKV</option>
+                  <option value="audio_mp3">Solo audio (MP3)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="resolutionSelect">Resolución</label>
+              <div class="select-wrap">
+                <select id="resolutionSelect">
+                  <option value="1080">1080p</option>
+                  <option value="720">720p</option>
+                  <option value="480">480p</option>
+                  <option value="360">360p</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid one-column compact-grid">
+            <div>
+              <label for="outputPath">Carpeta destino</label>
+              <div class="input-group compact">
+                <input id="outputPath" type="text" placeholder="Selecciona una carpeta" />
+                <button id="browseBtn" type="button">Explorar</button>
+              </div>
+            </div>
+          </div>
+
+          <button id="downloadBtn" class="primary-btn">Descargar</button>
+        </section>
+
+        <section id="historyView" class="panel view-panel hidden">
+          <div class="history-header">
+            <h3>Historial</h3>
+          </div>
+          <div id="historyList" class="history-list"></div>
+        </section>
+
+        <section class="panel small-panel">
+          <div class="state-row">
+            <strong id="stateTitle">Estado</strong>
+            <span id="progressLabel">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <p id="statusMessage" class="message muted">La aplicación está lista para comenzar.</p>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

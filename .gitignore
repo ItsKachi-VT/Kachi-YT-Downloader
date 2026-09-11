@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Runtime downloads and local application data
+yt-dlp.exe
+history.json
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# IDEs and tooling
+.vscode/
+.idea/
